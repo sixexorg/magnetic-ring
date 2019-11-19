@@ -1,0 +1,54 @@
+config:
+  genesis:
+    chainId: 1
+    crystal: 10000000000000000
+    energy: 500000000000000000
+    official: ct1J8X6KQMKs2j6mCg99uC6M463m8ug6ze4
+    stars:
+    - { crystal: 12800000000000,account: ct0fHcR19s2nDaHxR3CVdUyYxHgsjzp8wrA,nodekey: 04dc2c38fd4985a30f31fe9ab0e1d6ffa85d33d5c8f0a5ff38c45534e8f4ffe751055e6f1bbec984839dd772a68794722683ed12994feb84a13b8086162591418f }
+    - { crystal: 12800000000000,account: ct0fHcR19s2nDaHxR3CVdUyYxHgsjzp8wrB,nodekey: 044a147deabaa89e15aab6f586ce8c9b68bf11043ca83387b125d82489252d94e858f7b43a43000d7a949ff1bd8742fcad57434d08b2455bfc5f681dd0cf0a32f6 }
+    - { crystal: 12800000000000,account: ct0fHcR19s2nDaHxR3CVdUyYxHgsjzp8wrC,nodekey: 0405269acdc54c24220f67911a3ac709b129ff2454717875b789288954bb2e6afaed4d59ff0f4c4d14afff9f6f4e1ffb71a1e5457fa2ca7440a020218559ab7f3f }
+
+  SysCfg:
+    StoreDir: ./magneticchain
+    HttpPort: 20086
+    GenBlock: true
+    LogPath: ./magnetic.log
+
+  TxPoolCfg:
+    MaxPending: 32000
+    MaxInPending: 200000
+    MaxInQueue: 200000
+    MaxTxInPool: 4
+
+  P2PCfg:
+    ReservedPeersOnly: false
+    ReservedCfg: {}
+    NetworkMagic: 1
+    NetworkId: 1
+    NetworkName: main
+    NodePort: 20087
+    NodeConsensusPort: 20088
+    DualPortSupport:
+    IsTLS: false
+    CertPath: ./
+    KeyPath: ./
+    CAPath: ./
+    HttpInfoPort: 20089
+    MaxHdrSyncReqs: 1024
+    MaxConnInBound: 1024
+    MaxConnOutBound: 1024
+    MaxConnInBoundForSingleIP: 1024
+
+  CliqueCfg:
+    Period: 20
+    Epoch: 100
+
+  BootNode:
+    IP: 192.168.9.128:40404
+
+  MongoCfg:
+    addr: "localhost:27017"
+    timeout: 60
+    poolLimit: 500
+    database: "league"
